@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## datamovies
+
+This repository is for code for my class at the Computer Music Center, Columbia University, called "Sonic and Visual Representation of Data".  
 
 You can use the [editor on GitHub](https://github.com/benholtzman/datamovies/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
