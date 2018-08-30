@@ -23,6 +23,6 @@ To make sure the packages were successfully installed, type:
 `conda list`
 
 ## 1_notebooks
-This directory is where the party happens – the notebooks!
+This directory is where the fun happens – the notebooks!
 - **NB00_make_simple_sounds.ipynb** : Demonstrates sonification of time-varying (sinusoidal) signals
 - **NB01_DirectSonification.ipynb** : Reads in a real 14 hour long seismogram (ground motion) from the 2011 Tohoku earthquake and turns it into sound! The .wav soundfile is output to the **3_output** directory and can be played using most audio software such as iTunes or Audacity.
