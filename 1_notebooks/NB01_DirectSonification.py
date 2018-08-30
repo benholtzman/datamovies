@@ -144,19 +144,6 @@ print('This corresponds to a speed factor of: ' + str(int(SpeedFactor)))
 
 # In[20]:
 
-# So, set the new sampling rate, and then resample to a standard sampling rate
-sr_sound = int(sr*SpeedFactor)
-#sr_resample = 44100
-
-librosa.output.write_wav(DirOut + OutFileName, data_n, sr_sound, norm=False)
-
-# Some software have troubles with exotic sampling rates (VLC and audacity don't have), so it might be necessary 
-# to resample your sound.
-#dataOrig, srOrig = librosa.core.load(DirOut + OutFileName, sr=sr_sound)
-#data_rs = resampy.resample(dataOrig, srOrig, sr_resample)
-#librosa.output.write_wav(DirOut + OutFileName, data_rs, sr_resample, norm=False)
-
-
 # Original vs. Sonified Data
 plt.figure(figsize=(12,6))
 plt.subplot(1,2,1)
@@ -176,6 +163,18 @@ plt.title('New Seismogram (audible)')
 plt.show()
 
 # The difference is only in the time scale. We compress 14 hours into 12 seconds
+
+# So, set the new sampling rate, and then resample to a standard sampling rate
+sr_sound = int(sr*SpeedFactor)
+#sr_resample = 44100
+
+librosa.output.write_wav(DirOut + OutFileName, data_n, sr_sound, norm=False)
+
+# Some software have troubles with exotic sampling rates (VLC and audacity don't have), so it might be necessary 
+# to resample your sound.
+#dataOrig, srOrig = librosa.core.load(DirOut + OutFileName, sr=sr_sound)
+#data_rs = resampy.resample(dataOrig, srOrig, sr_resample)
+#librosa.output.write_wav(DirOut + OutFileName, data_rs, sr_resample, norm=False)
 
 
 
