@@ -157,7 +157,25 @@ librosa.output.write_wav(DirOut + OutFileName, data_n, sr_sound, norm=False)
 #librosa.output.write_wav(DirOut + OutFileName, data_rs, sr_resample, norm=False)
 
 
-# In[ ]:
+# Original vs. Sonified Data
+plt.figure(figsize=(12,6))
+plt.subplot(1,2,1)
+plt.plot(t_hours,data_n,'k')
+plt.xlabel('Time (hours)')
+plt.ylabel('Amplitude of seismic wave\n (normalized to max.)')
+plt.grid()
+plt.xlim([0,OriginalDuration/3600])
+plt.title('Old Seismogram (inaudible)')
+
+plt.subplot(1,2,2)
+plt.plot(t_hours*3600/SpeedFactor,data_n,'k')
+plt.xlabel('Time (sec)')
+plt.grid()
+plt.xlim([0,TargetDuration])
+plt.title('New Seismogram (audible)')
+plt.show()
+
+# The difference is only in the time scale. We compress 14 hours into 12 seconds
 
 
 

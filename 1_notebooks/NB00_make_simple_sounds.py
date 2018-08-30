@@ -304,6 +304,7 @@ plt.xlabel('Time (s)')
 plt.ylabel('Frequency (Hz)')
 cbar = plt.colorbar()
 cbar.ax.set_ylabel('dB', rotation=270)
+plt.show()
 
 
 # In[ ]:
