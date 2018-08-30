@@ -18,7 +18,7 @@ The easiest way to download these packages is using Anaconda (see above). Follow
 
 `conda install -c anaconda numpy`
 
-To make sure the packages were successfully installed, type this:
+To make sure the packages were successfully installed, type:
 
 `conda list`
 
