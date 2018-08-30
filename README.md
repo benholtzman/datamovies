@@ -27,7 +27,7 @@ To access the codes from your machine, open the Mac Terminal and type:
 
 `git clone https://github.com/jbrussell/datamovies`
 
-Alternatively, click *Clone or download* at the top right corner of this page and *Download ZIP*.
+Alternatively, click *"Clone or download"* at the top right corner of this page and *"Download ZIP"*.
 
 ## 1_notebooks: where the fun happens!
 This directory contains the demo "notebooks" for sonifying data.
