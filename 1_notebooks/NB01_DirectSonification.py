@@ -169,7 +169,7 @@ plt.title('Old Seismogram (inaudible)')
 
 plt.subplot(1,2,2)
 plt.plot(t_hours*3600/SpeedFactor,data_n,'k')
-plt.xlabel('Time (sec)')
+plt.xlabel('Time (seconds)')
 plt.grid()
 plt.xlim([0,TargetDuration])
 plt.title('New Seismogram (audible)')
