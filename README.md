@@ -14,6 +14,6 @@ Once downloaded, run the Jupyter Notebook by typing in the Mac Terminal (or Comm
 - librosa      (https://anaconda.org/conda-forge/librosa)
 - resampy      (https://anaconda.org/conda-forge/resampy)
 
-The easiest way to download these packages is using Anaconda (see above). Click the link next to each code name above and copy and paste the corresponding command into the terminal. For example, to install numpy type this into the Mac Terminal:
+The easiest way to download these packages is using Anaconda (see above). Follow the link next to each package name above and copy-paste the corresponding command into the terminal. For example, to install numpy type this into the Mac Terminal:
 
 `conda install -c anaconda numpy`
