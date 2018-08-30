@@ -29,7 +29,7 @@ To access the codes from your machine, open the Mac Terminal and type:
 
 Alternatively, click *"Clone or download"* at the top right corner of this page and *"Download ZIP"*.
 
-## [1_notebooks](https://github.com/jbrussell/datamovies/tree/master/1_notebooks): where the fun happens!
+## [1_notebooks](https://github.com/jbrussell/datamovies/tree/master/1_notebooks): where the magic happens!
 This directory contains the demo "notebooks" for sonifying data.
 
 - [**NB00_make_simple_sounds.ipynb**](https://github.com/jbrussell/datamovies/blob/master/1_notebooks/NB00_make_simple_sounds.ipynb) : Demonstrates sonification of time-varying (sinusoidal) signals
