@@ -1,7 +1,7 @@
 # datamovies: Introduction
 This package includes a couple of demo codes for sonifying data, written by [Ben Holtzman](https://www.ldeo.columbia.edu/~benh/) and others.
 
-The codes in this package are in the form of Jupyter Notebooks, which are becoming the most popular way to write and share Python code within the scientific community. The easiest way to install Jupyter Notebook is by installing Anaconda – it comes included with Anaconda. Click [here](https://www.anaconda.com/download/) to download Anaconda.
+The codes in this package are in the form of [Jupyter Notebooks](http://jupyter.org/install), which are becoming the most popular way to write and share Python code within the scientific community. The easiest way to install Jupyter Notebook is by installing Anaconda – it comes included with Anaconda. Click [here](https://www.anaconda.com/download/) to download Anaconda.
 
 Once downloaded, run the Jupyter Notebook by typing in the Mac Terminal (or Command Prompt for Windows):
 
