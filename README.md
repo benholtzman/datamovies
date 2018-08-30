@@ -23,7 +23,7 @@ To make sure the packages were successfully installed, type:
 `conda list`
 
 ## Clone repository
-To get the repository on your machine to access the codes, open the Mac Terminal and type:
+To access the codes from your machine, open the Mac Terminal and type:
 
 `git clone https://github.com/jbrussell/datamovies`
 
