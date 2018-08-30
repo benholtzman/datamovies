@@ -30,8 +30,8 @@ To get the repository on your machine to access the codes, open the Mac Terminal
 Alternatively, click *Clone or download* at the top right corner of this page and *Download ZIP*.
 
 ## 1_notebooks: where the fun happens!
-https://github.com/jbrussell/datamovies/tree/master/1_notebooks
 This directory contains the demo "notebooks" for sonifying data.
+https://github.com/jbrussell/datamovies/tree/master/1_notebooks
 
 - **NB00_make_simple_sounds.ipynb** : Demonstrates sonification of time-varying (sinusoidal) signals
 - **NB01_DirectSonification.ipynb** : Reads in a real 14 hour long seismogram (ground motion) from the 2011 Tohoku earthquake and turns it into sound! The .wav soundfile is output to the **3_output** directory and can be played using most audio software such as iTunes or Audacity.
