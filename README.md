@@ -14,7 +14,7 @@ Once downloaded, run the Jupyter Notebook by typing in the Mac Terminal (or Comm
 - [**librosa**      ](https://anaconda.org/conda-forge/librosa)
 - [**resampy**      ](https://anaconda.org/conda-forge/resampy)
 
-The easiest way to download these packages is using Anaconda (see above). Follow the link next to each package name above and copy-paste the corresponding command into a terminal window. For example, to install **numpy** type this into the Mac Terminal:
+The easiest way to download these packages is using Anaconda (see above). Follow the link for each package name above and copy-paste the corresponding command into a terminal window. For example, to install **numpy** type this into the Mac Terminal:
 
 `conda install -c anaconda numpy`
 
@@ -29,9 +29,8 @@ To access the codes from your machine, open the Mac Terminal and type:
 
 Alternatively, click *"Clone or download"* at the top right corner of this page and *"Download ZIP"*.
 
-## 1_notebooks: where the fun happens!
+## [1_notebooks](https://github.com/jbrussell/datamovies/tree/master/1_notebooks): where the fun happens!
 This directory contains the demo "notebooks" for sonifying data.
-https://github.com/jbrussell/datamovies/tree/master/1_notebooks
 
 - **NB00_make_simple_sounds.ipynb** : Demonstrates sonification of time-varying (sinusoidal) signals
 - **NB01_DirectSonification.ipynb** : Reads in a real 14 hour long seismogram (ground motion) from the 2011 Tohoku earthquake and turns it into sound! The .wav soundfile is output to the **3_output** directory and can be played using most audio software such as iTunes or Audacity.
