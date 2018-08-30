@@ -17,3 +17,7 @@ Once downloaded, run the Jupyter Notebook by typing in the Mac Terminal (or Comm
 The easiest way to download these packages is using Anaconda (see above). Follow the link next to each package name above and copy-paste the corresponding command into the terminal. For example, to install numpy type this into the Mac Terminal:
 
 `conda install -c anaconda numpy`
+
+To make sure the packages were successfully installed, type this:
+
+`conda list`
