@@ -1,5 +1,5 @@
 ### datamovies
-This package includes a couple of demo codes for sonifying data, written by Ben Holtzman and others.
+This package includes a couple of demo codes for sonifying data, written by Ben Holtzman (https://www.ldeo.columbia.edu/~benh/) and others.
 
 ## Required Packages
 - numpy
