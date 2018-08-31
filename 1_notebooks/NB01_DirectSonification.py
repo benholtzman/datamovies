@@ -115,7 +115,7 @@ plt.grid()
 plt.xlim([0,duration/3600])
 plt.subplot(1,2,2)
 plt.plot(np.log10(f),20*np.log10(np.absolute(S)),'k') 
-plt.xlabel('Frequency (Hz)')
+plt.xlabel('Log Frequency (Hz)')
 plt.ylabel('Amplitude of seismic wave (dB)')
 plt.grid()
 
