@@ -1,2 +1,4 @@
 *.DS_Store
 *.wav
+./3_output_nogit/*
+./0_data_nogit/*
