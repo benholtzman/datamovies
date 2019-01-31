@@ -9,15 +9,11 @@
 # ### (5) LOOKING at a sound: the Spectrogram
 # ### (6) data: modulating amplitude with an envelope. 
 
-# In[14]:
 
 import numpy as np
 from matplotlib import pyplot as plt # for plots
 
 import librosa
-
-
-# In[15]:
 
 # (1) a sine wave: 
 # way 1: numpy sin, in radians: a cycle is 2*pi-- this is GEOMETRY, not time ! 
