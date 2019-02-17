@@ -5,71 +5,58 @@
 import numpy as np
 
 def makeDataChord(pitches,time,times,data_notes):
-    t_end = time[-1]
+    t_end = time[len(time)-1]
     ch_notes = []
     ch_times = []
     ch_durs = []
+    grad_notes = np.gradient(data_notes)
 
     for i,note in enumerate(pitches):
+    #for note in pitches:
         note_times = []
         note_times = times[data_notes==note]
-        print(note_times)
-        print('now looping over the next note_times:')
+        note_inds = np.where(data_notes==note)[0] # funny shape coming out of here... a tuple of an array and empty dim (or something)
+        #print('now looping over the next note_times:')
+        #print(note_times)
+        #print(note_inds)
         
-        for ind_nt, t in enumerate(note_times):
-            # find the index at this point.
-            print('time = ' + str(t))
-            # itemindex = numpy.where(array==item)
-            ind_time = 0
-            ind_time = np.where(times==t)
-            ind_time = int(ind_time[0])
-            print('ind_time = ' + str(ind_time))
-            dn_next = data_notes[ind_time+1]
+        
+        for ind_nt, t in enumerate(note_times):            
+            #print('ind_nt = ' + str(ind_nt))
+            #print('t_note = ' + str(t))
+            
+            ind_local = int(note_inds[ind_nt])
+            #print(ind_local)
+            local_grad = float(grad_notes[ind_local])
+            #print(local_grad)
             
             # positive slope
-            if dn_next > data_notes[ind_nt]:
-                if ind_nt == (len(note_times)-1):
-                    dur = t_end-t             
-                else:
-                    dur = note_times[ind_time+1] - t  #note_times[ind_time]
+            if local_grad > 0.0 and ind_nt < (len(note_times)-1):
+                #print('grad_notes is POS. ')
+                dur = note_times[ind_nt+1] - t 
+                
+                #print('dur = '+ str(dur))  
+                ch_notes.append(note)
+                ch_times.append(t)
+                ch_durs.append(dur)
+                # if it is the last note: 
+            elif local_grad > 0.0 and ind_nt == (len(note_times)-1):
+                dur = t_end-t
                     
-                    ch_notes.append(note)
-                    ch_times.append(t)
-                    ch_durs.append(dur)
+                #print('dur = '+ str(dur))  
+                ch_notes.append(note)
+                ch_times.append(t)
+                ch_durs.append(dur)
                     
             # negative slope      
-            if dn_next < data_notes[ind_time]:
-                if ind_nt==0:
-                    dur = t
-                    ch_notes.append(note)
-                    ch_times.append(time[0])
-                    ch_durs.append(dur)
-                    
+            elif local_grad < 0.0 and ind_nt==0: # dn_next < data_notes[ind_time]:
+                #print('grad_notes is NEG. AND its the first note. ')
+                dur = t
+
+                #print('dur = '+ str(dur)) 
+                ch_notes.append(note)
+                ch_times.append(time[0])
+                ch_durs.append(dur)
+
         
     return ch_notes, ch_times, ch_durs
-        
-#         if len(a)%2==0:
-#             print('even')
-#             for i in range(len(a)):
-#                 if (i)%2==0:
-#                     dur_a = a[i+1]-a[i]
-#                     ch_notes.append(note)
-#                     ch_times.append(a[i])
-#                     ch_durs.append(dur_a)
-                    
-#         elif len(a)%2==1:
-#             print('odd')
-#             for i in range(len(a)):
-#                 if i<len(a)-1:  #  no -1, it breaks; -1 gives same as -2 
-#                     if (i)%2==0: 
-#                         #dur_a = a[i+1]-a[i]
-#                         dur_a = a[i+1]-a[i]
-#                         ch_notes.append(note)
-#                         ch_times.append(a[i])
-#                         ch_durs.append(dur_a)
-#                 if len(a)==1:
-#                     #dur_a = time[-1] - times[i]
-#                     dur_a = time[-1] - times[i]
-#                     ch_notes.append(note)
-#                     ch_times.append(a[i])
-#                     ch_durs.append(dur_a)
