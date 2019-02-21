@@ -91,7 +91,8 @@ def writeCmixSco_GRAN(tones_dict):
     f_out = open("./" + score_name , 'w')
     # MUST DELETE THE SOUND FILE BEFORE RUNNING (either with python or with -clobber )
     f_out.write("set_option(\"clobber = on\")\n") #"\n" added
-    f_out.write("rtsetparams(44100, 2)\n")
+    f_out.write("rtsetparams(44100, 1)\n") # mono sound ! 
+    # f_out.write("rtsetparams(44100, 2)\n") # stereo sound
     f_out.write("reset(44100)\n")
     f_out.write("load(\"GRANSYNTH\")\n")
     f_out.write(dur_string)
@@ -143,8 +144,8 @@ def writeCmixSco_GRAN(tones_dict):
     
     
     f_out.write("st = 0\n")  # what does this do ? 
-    f_out.write("GRANSYNTH(st, dur, amp, wave, granenv, hoptime, hopjitter, mindur, maxdur, minamp, maxamp, 1.0*pitch, transpcoll, pitchjitter, 14, 0, 1)\n")
-    
+    f_out.write("GRANSYNTH(st, dur, amp, wave, granenv, hoptime, hopjitter, mindur, maxdur, minamp, maxamp, 1.0*pitch, transpcoll, pitchjitter, 14, 1)\n") # mono
+    #f_out.write("GRANSYNTH(st, dur, amp, wave, granenv, hoptime, hopjitter, mindur, maxdur, minamp, maxamp, 1.0*pitch, transpcoll, pitchjitter, 14, 0, 1)\n") # stereo
     print("RTcmix score created.")
     
     return
