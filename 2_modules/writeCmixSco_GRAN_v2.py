@@ -126,7 +126,7 @@ def writeCmixSco_GRAN(tones_dict):
     f_out.write("maxdur = .05\n")
     #f_out.write("mindur = .04\n")
     #f_out.write("maxdur = .06\n")
-    f_out.write("minamp = maxamp = 1\n")
+    f_out.write("minamp = maxamp = 0.9\n")
     
     # PITCH: 
     #f_out.write("pitch = maketable(\"line\", \"nonorm\", 1000, 0,1, 1,20)\n")
@@ -143,7 +143,7 @@ def writeCmixSco_GRAN(tones_dict):
     f_out.write(hopjitter_cmd)
     
     
-    f_out.write("st = 0\n")  # what does this do ? 
+    f_out.write("st = 0\n")  # what does this do ?  NEED it there, whatever it is :) 
     f_out.write("GRANSYNTH(st, dur, amp, wave, granenv, hoptime, hopjitter, mindur, maxdur, minamp, maxamp, 1.0*pitch, transpcoll, pitchjitter, 14, 1)\n") # mono
     #f_out.write("GRANSYNTH(st, dur, amp, wave, granenv, hoptime, hopjitter, mindur, maxdur, minamp, maxamp, 1.0*pitch, transpcoll, pitchjitter, 14, 0, 1)\n") # stereo
     print("RTcmix score created.")
