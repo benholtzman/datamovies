@@ -7,7 +7,8 @@ import pickle
 #initializing
 time_interval=0.1
 velocity=0.5
-s=pd.Series([], [])
+s=pd.DataFrame({'position':[], 'time':[]})
+
 time=0.0
 position=0.0
 RIGHTBOUND=3
@@ -18,7 +19,9 @@ P=5
 def initialize(init_position):
     global s, position
     position=init_position
-    s=s.append(pd.Series([init_position],[0]))
+    #s=s.append(pd.DataFrame([init_position],[0]))
+    s=s.append({'position': init_position, 'time':0.0}, ignore_index=True)
+    
     
 #this is the only method you need to call; the other methods below are helping methods
 #input a list of desired positions. e.g. move([1,1,0.5])
@@ -41,8 +44,10 @@ def move_once(r):
 
 def stay():
     global position, time, s, e
-    time=round(time+time_interval,5)
-    s=s.append(pd.Series([position],[time]))
+    time=round(time+time_interval,P)
+    #s=s.append(pd.Series([position],[time]))
+    #s=s.append(pd.DataFrame([position],[time]))
+    s = s.append({'position': position, 'time':time}, ignore_index=True) #, ignore_index=True
     
 def rightmost(r):
     global position,time,s,e
@@ -50,7 +55,9 @@ def rightmost(r):
         position=round(position+velocity*time_interval,P)
         if position<=r:
             time=round(time+time_interval,P)
-            s=s.append(pd.Series([position],[time]))
+            #s=s.append(pd.Series([position],[time]))
+            #s=s.append(pd.DataFrame([position],[time]))
+            s = s.append({'position': position, 'time':time}, ignore_index=True)
 
 def leftmost(r):
     global position, time, s,e
@@ -58,4 +65,6 @@ def leftmost(r):
         position=round(position-velocity*time_interval,P)
         if position>=r:
             time=round(time+time_interval,P)
-            s=s.append(pd.Series([position],[time]))
+            #s=s.append(pd.Series([position],[time]))
+            #s=s.append(pd.DataFrame([position],[time]))
+            s = s.append({'position': position, 'time':time}, ignore_index=True)
