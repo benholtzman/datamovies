@@ -1,3 +1,0 @@
-have to add a file to create a new directory in git... 
-but this might be a useful readme in the future ! 
-
