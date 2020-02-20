@@ -3,6 +3,8 @@
 *.sco
 *.avi
 *.mp4
+*.png
+1_codes/hidden/
 2_modules/.ipynb_checkpoints/
 2_modules/__pycache__/
 3_output_nogit/*
