@@ -1,5 +1,11 @@
 *.DS_Store
 *.wav
-./3_output_nogit/*
-./0_data_nogit/*
-./1_codes/*checkpoint*
+*.sco
+*.avi
+*.mp4
+2_modules/.ipynb_checkpoints/
+2_modules/__pycache__/
+3_output_nogit/*
+0_data_nogit/*
+1_codes/.ipynb_checkpoints/*
+./*checkpoint.ipynb
